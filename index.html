@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN RDC - Connexion Internet Abordable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-shield-lock"></i> VPN RDC
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">Comment ça marche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Tarifs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Internet Haut Débit à Prix Abordable</h1>
+                    <p class="lead">Accédez à une connexion internet rapide et stable avec nos fichiers VPN spécialement optimisés pour la RDC.</p>
+                    <a href="#vpn-form" class="btn btn-primary btn-lg">Obtenir mon VPN</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/static/images/vpnimg.jpg" alt="VPN Illustration" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Comment utiliser notre service</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-box bg-primary">
+                                <i class="bi bi-cart"></i>
+                            </div>
+                            <h5 class="mt-3">1. Choisissez votre forfait</h5>
+                            <p>Sélectionnez la durée qui vous convient (24h, 3 jours, 7 jours ou 30 jours).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-box bg-success">
+                                <i class="bi bi-credit-card"></i>
+                            </div>
+                            <h5 class="mt-3">2. Paiement sécurisé</h5>
+                            <p>Effectuez le paiement via Flutterwave en toute sécurité.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-box bg-info">
+                                <i class="bi bi-download"></i>
+                            </div>
+                            <h5 class="mt-3">3. Téléchargez votre fichier</h5>
+                            <p>Recevez immédiatement votre fichier VPN après paiement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nos Forfaits VPN</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white text-center py-3">
+                            <h4>24 Heures</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">1,000 FC</h3>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Connexion illimitée</li>
+                                <li>Vitesse optimisée</li>
+                                <li>Support technique</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-outline-primary w-100" onclick="selectPlan('24h')">Choisir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white text-center py-3">
+                            <h4>3 Jours</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">3,000 FC</h3>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Connexion illimitée</li>
+                                <li>Vitesse optimisée</li>
+                                <li>Support technique</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-outline-success w-100" onclick="selectPlan('3j')">Choisir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-info text-white text-center py-3">
+                            <h4>7 Jours</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">5,000 FC</h3>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Connexion illimitée</li>
+                                <li>Vitesse optimisée</li>
+                                <li>Support technique</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-outline-info w-100" onclick="selectPlan('7j')">Choisir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-warning text-dark text-center py-3">
+                            <h4>30 Jours</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">10,000 FC</h3>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Connexion illimitée</li>
+                                <li>Vitesse optimisée</li>
+                                <li>Support technique</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-outline-warning w-100" onclick="selectPlan('30j')">Choisir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VPN Form -->
+    <section id="vpn-form" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0">Obtenir votre fichier VPN</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="vpnRequestForm">
+                                <div class="mb-3">
+                                    <label for="plan" class="form-label">Forfait VPN</label>
+                                    <select class="form-select" id="plan" required>
+                                        <option value="" selected disabled>Choisissez un forfait</option>
+                                        <option value="24h">24 Heures - 1,000 FC</option>
+                                        <option value="3j">3 Jours - 3,000 FC</option>
+                                        <option value="7j">7 Jours - 5,000 FC</option>
+                                        <option value="30j">30 Jours - 10,000 FC</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email (facultatif)</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Votre email pour recevoir le fichier">
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="terms" required>
+                                    <label class="form-check-label" for="terms">J'accepte les conditions d'utilisation</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2">Payer avec Flutterwave</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Questions Fréquentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Comment installer le fichier VPN ?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>1. Téléchargez l'application Ha Tunnel ou SocksIP sur votre téléphone</p>
+                            <p>2. Importez le fichier VPN que vous avez acheté</p>
+                            <p>3. Activez la connexion VPN et profitez d'internet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Le paiement est-il sécurisé ?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Oui, tous les paiements sont traités par Flutterwave, une plateforme de paiement sécurisée et fiable.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Que faire si le fichier ne fonctionne pas ?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Contactez-nous via WhatsApp au +243XXXXXXXX et nous vous enverrons un nouveau fichier gratuitement.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-shield-lock"></i> VPN RDC</h5>
+                    <p>Solution internet abordable pour les jeunes de la RDC.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#how-it-works" class="text-white">Comment ça marche</a></li>
+                        <li><a href="#pricing" class="text-white">Tarifs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-whatsapp"></i> +243 XXXXXXXX</li>
+                        <li><i class="bi bi-envelope"></i> contact@vpnrdc.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 VPN RDC. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Flutterwave Payment Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Paiement Flutterwave</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Vous serez redirigé vers Flutterwave pour effectuer le paiement. Après paiement, votre fichier VPN sera automatiquement téléchargé.</p>
+                    <div class="text-center py-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
